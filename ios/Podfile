@@ -1,0 +1,11 @@
+workspace 'Runner'
+
+platform :ios, "10.0"
+
+use_frameworks!
+
+target 'Runner' do
+
+    pod 'QuickBlox', '~> 2.17.1'
+
+end
