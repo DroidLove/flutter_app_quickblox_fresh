@@ -20,6 +20,7 @@ struct ChatManagerConstant {
     static let chatServiceDomain = "com.q-municate.chatservice"
     static let errorDomaimCode = -1000
     static let notFound = "SA_STR_DIALOG_REMOVED".localizedUppercase
+    static let dialogsPageLimit:Int = 100
 }
 
 protocol ChatManagerDelegate: class {
@@ -60,7 +61,7 @@ class ChatManager: NSObject {
     }()
     
     //MARK: - Public Methods
-    func updateStorage() {
+    func updateStorage(completionHandler: @escaping (_ result: String) -> Void) {
         
         self.delegate?.chatManagerWillUpdateStorage(self)
         
@@ -83,13 +84,14 @@ class ChatManager: NSObject {
         })
         
         loadGroup.enter()
-//        updateAllDialogs(withPageLimit: DialogsConstant.dialogsPageLimit,
-//                         completion: { (response: QBResponse?) -> Void in
-//                            if let response = response {
-//                                message = self.errorMessage(response: response) ?? ""
-//                            }
-//                            loadGroup.leave()
-//        })
+        updateAllDialogs(withPageLimit: ChatManagerConstant.dialogsPageLimit,
+                         completion: { (response: QBResponse?) -> Void in
+                            if let response = response {
+                                message = self.errorMessage(response: response) ?? ""
+                            }
+                            loadGroup.leave()
+                            completionHandler("Load") // return data & close
+        })
         
         loadGroup.notify(queue: DispatchQueue.main) {
             if message.isEmpty {

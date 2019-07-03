@@ -11,6 +11,7 @@
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
 		3B80C3941E831B6300D905FE /* App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B80C3931E831B6300D905FE /* App.framework */; };
 		3B80C3951E831B6300D905FE /* App.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B80C3931E831B6300D905FE /* App.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		66033E7422CC976100EA8228 /* ChatDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66033E7322CC976100EA8228 /* ChatDataSource.swift */; };
 		66E1C94322CB520B00DD6F91 /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E1C94222CB520B00DD6F91 /* ChatManager.swift */; };
 		66E1C94522CB528F00DD6F91 /* ChatStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E1C94422CB528F00DD6F91 /* ChatStorage.swift */; };
 		66E1C94C22CB59E800DD6F91 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E1C94B22CB59E800DD6F91 /* Profile.swift */; };
@@ -47,6 +48,7 @@
 		240C9FE5A39EFA6B090DB1B4 /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
 		3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppFrameworkInfo.plist; path = Flutter/AppFrameworkInfo.plist; sourceTree = "<group>"; };
 		3B80C3931E831B6300D905FE /* App.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = App.framework; path = Flutter/App.framework; sourceTree = "<group>"; };
+		66033E7322CC976100EA8228 /* ChatDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDataSource.swift; sourceTree = "<group>"; };
 		66E1C94222CB520B00DD6F91 /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
 		66E1C94422CB528F00DD6F91 /* ChatStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatStorage.swift; sourceTree = "<group>"; };
 		66E1C94B22CB59E800DD6F91 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		66E1C95122CBD98D00DD6F91 /* ChatScreen */ = {
 			isa = PBXGroup;
 			children = (
+				66033E7322CC976100EA8228 /* ChatDataSource.swift */,
 			);
 			name = ChatScreen;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 			files = (
 				66E1C94322CB520B00DD6F91 /* ChatManager.swift in Sources */,
 				66E1C94C22CB59E800DD6F91 /* Profile.swift in Sources */,
+				66033E7422CC976100EA8228 /* ChatDataSource.swift in Sources */,
 				66E1C95022CB73F500DD6F91 /* Reachability.swift in Sources */,
 				66E1C94522CB528F00DD6F91 /* ChatStorage.swift in Sources */,
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,

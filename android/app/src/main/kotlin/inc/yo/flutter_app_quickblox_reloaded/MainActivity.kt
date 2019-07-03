@@ -46,7 +46,7 @@ import kotlin.collections.ArrayList
 class MainActivity : FlutterActivity() {
     val TAG = "Checking"
     //    testuserpassword
-    val userCurrent = QBUser("testuserlogin1", "testuserpassword")
+    val userCurrent = QBUser("testuserlogin10", "testuserpassword")
     private lateinit var currentUser: QBUser
     private lateinit var qbChatDialog: QBChatDialog
     private lateinit var requestBuilder: QBRequestGetBuilder
@@ -328,7 +328,6 @@ class MainActivity : FlutterActivity() {
 //            showMessage(qbChatMessage)
             // Update the dart listing in the ui
             var receivedMessage = qbChatMessage.body
-
 
             channel.invokeMethod("updateChatListing", hashMapOf( "messageReceived" to receivedMessage,
                     "isCurrentUserMessage" to false))
